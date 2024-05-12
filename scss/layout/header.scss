@@ -1,6 +1,10 @@
 header{
     height: 75px;
     box-shadow: 0px 0px 5px 2px adjust-color($color: $col-Contrast, $alpha: 0.75);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: white;
     nav{
         ul{
             height: 100%;
@@ -11,6 +15,49 @@ header{
                 color: $col-Text;
                 font-size: 18px;
                 font-family: "Poppins";
+            }
+            @media(max-width: 600px){
+                display: none;
+            }
+        }
+    }
+    .dropdown__wrapper{
+        @include disFlex(row,center,space-between);
+        z-index: 1000;
+        .nav__boton{
+            align-self: center;
+            width: 75px;
+        }
+        .nav__logo{
+            margin-left: 16px;
+            width: 65px !important;
+        }
+        @media (min-width:601px){
+            display: none;
+        }
+    }
+    #dropdown__menu{
+        ul{
+            position: relative;
+            margin-left: auto;
+            padding-left: 8px;
+            background-color: white;
+            height: fit-content;
+            max-width: 50%;
+            width: 200px;
+            list-style: none;
+            @include disFlex(column, flex-end, center);
+            a{
+                text-decoration: none;
+                color: $col-Text;
+                font-size: 18px;
+                font-family: "Poppins";
+            }
+            li{
+                width: 100%;
+                padding-right: 8px;
+                text-align: end;
+                border-top: 2px solid $col-Contrast;
             }
         }
     }

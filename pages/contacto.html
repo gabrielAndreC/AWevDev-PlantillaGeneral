@@ -9,13 +9,25 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Productos</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
                     <li><a href=""><img src="" alt=""></li>
-                    <li><a href="">Contacto</a></li>
-                    <li><a href="">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
                 </ul>
             </nav>
+            <div class="dropdown__wrapper">
+                <img class="nav__logo" src="../resources/Imagen-D1.jpg" alt="">
+                <img class="nav__boton" id="dropdown__boton" src="../resources/dropdown.png" alt="">
+            </div>
+            <div id="dropdown__menu" style="display: none;">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <div class="wrapper__contacto">
@@ -51,5 +63,7 @@
                 <br>Conocé otros diseños. Contacto: <a href="mailto:gabrielandrecalvo@gmail.com">gabrielandrecalvo@gmail.com</a>
             </p>
         </footer>
+        
+        <script src="../scripts/dropdown.js"></script>
     </body>
 </html>

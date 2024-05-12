@@ -4,3 +4,15 @@
     align-items: $align;
     justify-content: $justify;
 }
+
+@mixin mq-mobile-S-L{
+    @media (max-width:430px){
+        @content;
+    }
+}
+
+@mixin mq-mobile-L-Tablet{
+    @media (min-width:431px) and (max-width:768px){
+        @content;
+    }
+}

@@ -1,5 +1,15 @@
 footer{
     background-color: $col-Secondary;
     height: 150px;
-    padding: 32px;  
+    padding: 32px;
+    margin-top: 75px;
+    @include mq-mobile-S-L{
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
 }

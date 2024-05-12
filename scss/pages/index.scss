@@ -1,9 +1,26 @@
+*{
+    @include mq-mobile-S-L{
+        hr{
+            width: 100% !important;
+        }
+    }
+}
+
 .wrapper{
     @include disFlex(column,center,center);
     .hero{
         margin-bottom: 16px;
         img{
             max-width: 100%;
+            @include mq-mobile-S-L{
+                height: 200px;
+                object-fit: cover;
+                object-position: -80px;
+            }
+            @include mq-mobile-L-Tablet{
+                object-fit:cover;
+                min-height: 200px
+            }
         }
     }
 
@@ -11,17 +28,45 @@
         @include disFlex(column, center, center);
         .hr-2{
             margin: 48px 0;
+            @include mq-mobile-S-L{
+                margin: 16px 0;
+            }
+            @include mq-mobile-L-Tablet{
+                width: 90% !important;
+            }
+        }
+            text-align: center;
+        p{
+            padding: 0 4px;
         }
     }
 
     .inicio_destacado{
         @include disFlex(column, normal, normal);
+        @include mq-mobile-S-L{
+            width: 100%;
+        }
         .tarjetaDestacado{
             @include disFlex(row, top, top);
+            @include mq-mobile-S-L{
+                padding: 16px;
+                flex-direction: column;
+            }
+            @include mq-mobile-L-Tablet{
+                padding: 0;
+            }
             padding: 0 64px;
             img{
                 width: 300px;
                 margin-right: 16px;
+                @include mq-mobile-S-L{
+                    width: 175px;
+                    height: 175px;
+                    margin-right: 0;
+                }
+                @include mq-mobile-L-Tablet{
+                    margin-left: 8px;
+                }
             }
             .tarjetaDestacado__info{
                 height: 100%;
@@ -30,11 +75,16 @@
                     font-family: "Poppins", sans-serif;
                     font-size: 24px;
                     font-weight: 700;
+                    @include mq-mobile-S-L{
+                        font-size: 20px;
+                        font-weight: 600;;
+                    }
                 }
             }
-
             &:nth-of-type(even){
-
+                @include mq-mobile-S-L{
+                    flex-direction: column;
+                }
                 margin-bottom: 16px;
                 
                 @include disFlex(row-reverse, flex-start, flex-start);
@@ -46,12 +96,21 @@
                 img{
                     margin-right: unset;
                     margin-left: 16px;
+                    @include mq-mobile-S-L{
+                        margin-left: auto;
+                    }
+                    @include mq-mobile-L-Tablet{
+                        margin-right: 8px;
+                    }
                 }
             }
         }
         .hr-5{
             align-self: center;
             margin: 8px 0;
+            @include mq-mobile-L-Tablet{
+                width: 100%;
+            }
         }
     }
 }

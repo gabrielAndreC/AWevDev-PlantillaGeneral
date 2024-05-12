@@ -3,20 +3,13 @@ let categoriasElegidas = [];
 const contenedor = document.getElementById("catalogoProductos")
 let productos = [
     prod1 ={ titulo: "cuadrado", desc: "desc breve", precio: 100, categoria: "c_cuadrado"},
-
     prod2 ={ titulo: "circulo", desc: "desc breve", precio: 100, categoria: "c_circulo"},
-
     prod3 ={ titulo: "triangulo", desc: "desc breve", precio: 100, categoria: "c_triangulo"},
-
     prod6 ={ titulo: "Hexagono", desc: "desc breve", precio: 100, categoria: "c_hexagono"},
-
     prod4 ={ titulo: "cuadrado", desc: "desc breve", precio: 100, categoria: "c_cuadrado"},
-
     prod5 ={ titulo: "circulo", desc: "desc breve", precio: 100, categoria: "c_circulo"},
-
-    prod6 ={ titulo: "triangulo", desc: "desc breve", precio: 100, categoria: "c_triangulo"},
-    
-    prod7 ={ titulo: "Hexagonos", desc: "desc breve", precio: 100, categoria: "c_hexagono"}
+    prod6 ={ titulo: "triangulo", desc: "desc breve", precio: 100, categoria: "c_triangulo"},    
+    prod7 ={ titulo: "Hexagono", desc: "desc breve", precio: 100, categoria: "c_hexagono"}
 ]
 
 function crearCard(el) {

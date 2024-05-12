@@ -11,18 +11,28 @@
         margin-bottom: 32px;
     }
     .catalogo{
-        @include disFlex(row,center,center);
+        @include disFlex(row,flex-start,center);
         border: 1px solid $col-Contrast;
         min-height: 600px;
-        width: 100%;
-        max-width: 1200px;
+        width: 90%;
         padding: 8px 0;
+        @include mq-mobile-S-L{
+            width: 95%;
+            justify-items: center
+        }
         #catalogoProductos{
             @include disFlex(row,flex-start,left);
             padding: 0 8px;
             min-height: 600px;
-            width: 100%;
+            width: 224px*4;
             flex-wrap: wrap;
+            @include mq-mobile-L-Tablet{
+                width: 224px*3;
+            }
+            @include mq-mobile-S-L{
+                width: 100%;
+                justify-content: space-around;
+            }
         }
         #catalogoFiltros{
             @include disFlex(column,flex-start,unset);
@@ -41,6 +51,9 @@
                 @include disFlex(row, center, center);
                 font-family: "Poppins";
                 label{margin-left: 4px;}
+            }
+            @include mq-mobile-S-L{
+                display: none;
             }
         }
     }

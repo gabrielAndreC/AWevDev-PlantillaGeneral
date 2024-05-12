@@ -11,11 +11,19 @@
         font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-size: 28px;
+        @include mq-mobile-S-L{
+            font-weight: 600;
+            font-size: 24px;
+        }
     }
     p{
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         font-size: 18px;
+        @include mq-mobile-S-L{
+            font-weight: 400;
+            font-size: 16px;
+        }
     }
 }
 @import "./layout/header.scss";
