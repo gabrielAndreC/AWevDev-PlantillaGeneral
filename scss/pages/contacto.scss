@@ -1,0 +1,108 @@
+.wrapper__contacto{
+    @include disFlex(column,center,center);
+    min-height: calc(100vh - (75px + 214px));
+    width: 100%;
+    h1{
+        text-align: center;
+        margin-top: 32px;
+    }
+    .hr-1{
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+.contacto{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 400px 500px;
+    grid-template-areas: 
+    "form form"
+    "telf map";
+    margin-bottom: 100px;
+
+    .contacto__form{
+        @include disFlex(column, center, center);
+        background-color: $col-Secondary;
+        color: $col-Text;
+        grid-area: form;
+        margin-bottom: 16px;
+        box-shadow: 0px 3px 2px 0px adjust-color($color: $col-Contrast, $alpha: 0.75);
+        h2{
+            font-family: "Poppins", sans-serif;
+            color: $col-Text;
+            margin-bottom: 16px;
+        }
+        form{
+            @include disFlex(row-reverse,normal,space-between);
+            flex-wrap: wrap;
+            max-width: 700px;
+        }
+        input{
+            width: 48%;
+            min-height: 40px;
+            margin-bottom: 8px;
+            // border: solid 1px rgba(0,0,0,0.50);
+            &.mail{
+                width:100%;
+            }
+            &:last-of-type{align-self: flex-end;}
+            &:blank{color: rgba(0,0,0,0.50);}
+        }
+        .mensaje{
+            min-width: 300px;
+            min-height: 40px;
+            width:100%;
+            height: 130px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            &:blank{color: rgba(0,0,0,0.50);}
+
+        }
+        *{
+            border: none;
+            outline: none;
+            padding: 8px;
+            transition: all 0.5s linear;
+            &:focus{
+                outline: solid 2px $col-Secondary;
+            }
+        }
+    }
+    .contacto__telefono{
+        @include disFlex(column, center, flex-start);
+        background-color: $col-Principal;
+        grid-area: telf;
+        padding-top: 32px;
+        img{
+            width: 200px;
+            margin-bottom: 16px;
+        }
+        h2{
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-size: 24px;
+        }
+        .hr-1{
+            width: 150px;
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
+        span{
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+    }
+    .contacto__maps{
+        background-color: $col-Contrast;
+        grid-area: map;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.wrapper{
+    @include disFlex(column,center,center);
+    .hero{
+        margin-bottom: 16px;
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .inicio_infoSmall{
+        @include disFlex(column, center, center);
+        .hr-2{
+            margin: 48px 0;
+        }
+    }
+
+    .inicio_destacado{
+        @include disFlex(column, normal, normal);
+        .tarjetaDestacado{
+            @include disFlex(row, top, top);
+            padding: 0 64px;
+            img{
+                width: 300px;
+                margin-right: 16px;
+            }
+            .tarjetaDestacado__info{
+                height: 100%;
+                @include disFlex(column,flex-start,flex-start);
+                h2{
+                    font-family: "Poppins", sans-serif;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+
+            &:nth-of-type(even){
+
+                margin-bottom: 16px;
+                
+                @include disFlex(row-reverse, flex-start, flex-start);
+                
+                .tarjetaDestacado__info{
+                    @include disFlex(column,flex-end,flex-start);
+                    text-align: end;
+                }
+                img{
+                    margin-right: unset;
+                    margin-left: 16px;
+                }
+            }
+        }
+        .hr-5{
+            align-self: center;
+            margin: 8px 0;
+        }
+    }
+}

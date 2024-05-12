@@ -1,0 +1,51 @@
+.wrapper__sobreNosotros{
+    min-height: calc(100vh - (75px + 214px));
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "carta info";
+}
+
+.sobreNosotros__carta{
+    padding: 16px 32px 0 32px;
+    background-color: $col-Principal;
+    box-shadow: 3px 0px 5px -1px adjust-color($color: $col-Contrast, $alpha: 0.75);
+    grid-area: carta;
+    @include disFlex(column, center, normal);
+    h2{
+        font-family: "Poppins", sans-serif;
+        color: white;
+    }
+    span{
+        font-family: "Poppins", sans-serif;
+        color: white;
+    }
+    img{
+        width: 90%;
+        margin-bottom: 32px;
+    }
+    .hr-1{
+        &:first-of-type{
+            margin-bottom: 16px;
+        }
+        &:last-of-type{
+            margin-top: 100px;
+            margin-bottom: 32px;
+            width: 200px;
+        }
+    }
+}
+
+.sobreNosotros__info{
+    grid-area: info;
+    padding: 0 64px;
+    padding-top: 50px;
+    @include disFlex(column, center, normal);
+    .hr-1{
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+    p{
+        margin-bottom: 100px;
+    }
+}

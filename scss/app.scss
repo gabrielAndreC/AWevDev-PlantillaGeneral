@@ -1,0 +1,28 @@
+@import "./elements/colors.scss";
+@import "./elements/mixins.scss";
+@import "./elements/fonts.scss";
+@import "./elements/elements.scss";
+@import "./elements/cards.scss";
+*{//reset
+    margin: 0;
+    padding: 0;
+    color: $col-Text;
+    h1{
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    p{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+@import "./layout/header.scss";
+@import "./layout/main.scss";
+@import "./layout/footer.scss";
+
+@import "./pages/index.scss";
+@import "./pages/sobrenosotros.scss";
+@import "./pages/contacto.scss";
+@import "./pages/productos.scss";
