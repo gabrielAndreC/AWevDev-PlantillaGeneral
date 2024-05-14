@@ -428,6 +428,19 @@ footer {
   grid-template-columns: 30% auto;
   grid-template-areas: "carta info";
 }
+@media (max-width: 430px) {
+  .wrapper__sobreNosotros {
+    grid-template-columns: auto;
+    grid-template-rows: 30% auto;
+    grid-template-areas: "carta" "info";
+  }
+}
+@media (max-width: 768px) {
+  .wrapper__sobreNosotros {
+    grid-template-columns: auto;
+    grid-template-areas: "carta" "info";
+  }
+}
 
 .sobreNosotros__carta {
   padding: 16px 32px 0 32px;
@@ -446,18 +459,53 @@ footer {
 .sobreNosotros__carta span {
   font-family: "Poppins", sans-serif;
   color: white;
+  text-align: center;
 }
 .sobreNosotros__carta img {
   width: 90%;
   margin-bottom: 32px;
 }
+@media (max-width: 768px) {
+  .sobreNosotros__carta img {
+    width: 40%;
+  }
+}
+@media (max-width: 430px) {
+  .sobreNosotros__carta img {
+    width: 30%;
+  }
+}
 .sobreNosotros__carta .hr-1:first-of-type {
   margin-bottom: 16px;
+  width: 90%;
 }
 .sobreNosotros__carta .hr-1:last-of-type {
   margin-top: 100px;
   margin-bottom: 32px;
   width: 200px;
+}
+@media (max-width: 768px) {
+  .sobreNosotros__carta .hr-1 {
+    margin: 0;
+  }
+  .sobreNosotros__carta .hr-1:first-of-type {
+    margin-bottom: 20px;
+  }
+  .sobreNosotros__carta .hr-1:last-of-type {
+    margin-top: auto;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .sobreNosotros__carta .hr-1 {
+    margin: 0;
+  }
+  .sobreNosotros__carta .hr-1:last-of-type {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+  }
 }
 
 .sobreNosotros__info {
@@ -475,6 +523,16 @@ footer {
 }
 .sobreNosotros__info p {
   margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .sobreNosotros__info {
+    padding: 25px 16px 0 16px;
+  }
+}
+@media (max-width: 768px) {
+  .sobreNosotros__info h1 {
+    text-align: center;
+  }
 }
 
 .wrapper__contacto {
@@ -502,6 +560,13 @@ footer {
   grid-template-areas: "form form" "telf map";
   margin-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .contacto {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "form " "telf " "map ";
+  }
+}
 .contacto .contacto__form {
   display: flex;
   flex-direction: column;
@@ -512,6 +577,11 @@ footer {
   grid-area: form;
   margin-bottom: 16px;
   box-shadow: 0px 3px 2px 0px #c3b59f;
+}
+@media (max-width: 768px) {
+  .contacto .contacto__form {
+    padding: 0 8px;
+  }
 }
 .contacto .contacto__form h2 {
   font-family: "Poppins", sans-serif;
@@ -525,6 +595,11 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 700px;
+}
+@media (max-width: 768px) {
+  .contacto .contacto__form form {
+    max-width: 90%;
+  }
 }
 .contacto .contacto__form input {
   width: 48%;
@@ -540,6 +615,14 @@ footer {
 .contacto .contacto__form input:blank {
   color: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .contacto .contacto__form input.apellido {
+    width: 100%;
+  }
+  .contacto .contacto__form input.nombre {
+    width: 100%;
+  }
+}
 .contacto .contacto__form .mensaje {
   min-width: 300px;
   min-height: 40px;
@@ -551,6 +634,11 @@ footer {
 }
 .contacto .contacto__form .mensaje:blank {
   color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .contacto .contacto__form .mensaje {
+    min-width: 90%;
+  }
 }
 .contacto .contacto__form * {
   border: none;
@@ -573,6 +661,16 @@ footer {
 .contacto .contacto__telefono img {
   width: 200px;
   margin-bottom: 16px;
+}
+@media (max-width: 430px) {
+  .contacto .contacto__telefono img {
+    width: 50%;
+  }
+}
+@media (min-width: 431px) and (max-width: 768px) {
+  .contacto .contacto__telefono img {
+    width: 25%;
+  }
 }
 .contacto .contacto__telefono h2 {
   color: white;
@@ -597,6 +695,11 @@ footer {
 .contacto .contacto__maps iframe {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  .contacto .contacto__maps iframe {
+    height: 300px;
+  }
 }
 
 .wrapper__productos {

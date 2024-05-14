@@ -4,6 +4,19 @@
     grid-template-columns: 30% auto;
     grid-template-areas: 
     "carta info";
+    @include mq-mobile-S-L{
+        grid-template-columns: auto;
+        grid-template-rows: 30% auto;
+        grid-template-areas: 
+        "carta"
+        "info";
+    }
+    @include mq-mobile-S-Tablet{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "carta"
+        "info";
+    }
 }
 
 .sobreNosotros__carta{
@@ -19,19 +32,46 @@
     span{
         font-family: "Poppins", sans-serif;
         color: white;
+        text-align: center;
     }
     img{
         width: 90%;
         margin-bottom: 32px;
+        @include mq-mobile-S-Tablet{
+            width: 40%;
+        }
+        @include mq-mobile-S-L{
+            width: 30%;
+        }
     }
     .hr-1{
         &:first-of-type{
             margin-bottom: 16px;
+            width: 90%;
         }
         &:last-of-type{
             margin-top: 100px;
             margin-bottom: 32px;
             width: 200px;
+        }
+        @include mq-mobile-S-Tablet{
+            margin: 0;
+            &:first-of-type{
+                margin-bottom: 20px;
+            }
+            &:last-of-type{
+                margin-top: auto;
+                margin-bottom: 20px;
+                width: 200px;
+            }
+        }
+        @include mq-mobile-S-Tablet{
+            margin: 0;
+            &:last-of-type{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 200px;
+            }
         }
     }
 }
@@ -47,5 +87,13 @@
     }
     p{
         margin-bottom: 100px;
+    }
+    @include mq-mobile-S-Tablet{
+        padding: 25px 16px 0 16px;
+    }
+    h1{
+        @include mq-mobile-S-Tablet{
+            text-align: center;
+        }
     }
 }

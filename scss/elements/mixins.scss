@@ -16,3 +16,9 @@
         @content;
     }
 }
+
+@mixin mq-mobile-S-Tablet{
+    @media (max-width:768px){
+        @content;
+    }
+}

@@ -20,6 +20,14 @@
     grid-template-areas: 
     "form form"
     "telf map";
+    @include mq-mobile-S-Tablet{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "form "
+        "telf "
+        "map ";
+    }
     margin-bottom: 100px;
 
     .contacto__form{
@@ -29,6 +37,9 @@
         grid-area: form;
         margin-bottom: 16px;
         box-shadow: 0px 3px 2px 0px adjust-color($color: $col-Contrast, $alpha: 0.75);
+        @include mq-mobile-S-Tablet{
+            padding: 0 8px;
+        }
         h2{
             font-family: "Poppins", sans-serif;
             color: $col-Text;
@@ -38,6 +49,9 @@
             @include disFlex(row-reverse,normal,space-between);
             flex-wrap: wrap;
             max-width: 700px;
+            @include mq-mobile-S-Tablet{
+                max-width: 90%;
+            }
         }
         input{
             width: 48%;
@@ -49,6 +63,14 @@
             }
             &:last-of-type{align-self: flex-end;}
             &:blank{color: rgba(0,0,0,0.50);}
+            @include mq-mobile-S-Tablet{
+                &.apellido{
+                    width: 100%;
+                }
+                &.nombre{
+                    width: 100%;
+                }
+            }
         }
         .mensaje{
             min-width: 300px;
@@ -59,7 +81,9 @@
             font-size: 14px;
             font-family: Arial, Helvetica, sans-serif;
             &:blank{color: rgba(0,0,0,0.50);}
-
+            @include mq-mobile-S-Tablet{
+                min-width: 90%;
+            }
         }
         *{
             border: none;
@@ -79,6 +103,12 @@
         img{
             width: 200px;
             margin-bottom: 16px;
+            @include mq-mobile-S-L{
+                width: 50%;
+            }
+            @include mq-mobile-L-Tablet{
+                width: 25%;
+            }
         }
         h2{
             color: white;
@@ -103,6 +133,9 @@
         iframe{
             width: 100%;
             height: 100%;
+            @include mq-mobile-S-Tablet{
+                height: 300px;
+            }
         }
     }
 }
