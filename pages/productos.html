@@ -33,12 +33,33 @@
             <div class="wrapper__productos">
                 <h1>Organizá tus productos</h1>
                 <hr class="hr-1">
+                <div id="mobileFiltros">
+                    <button type="button" id="catalogo__boton"></button>
+                    <section id="mobileCatalogoFiltros">
+                        <div class="catalogoCategoria">
+                            <input type="checkbox" name="c_cuadrado" id="categoria1" class="labelCheck">
+                            <label for="categoria1" class="catalogoLabel">Cuadrados</label>
+                        </div>
+                        <div class="catalogoCategoria">
+                            <input type="checkbox" name="c_circulo" id="categoria2" class="labelCheck">
+                            <label for="categoria2" class="catalogoLabel">Circulos</label>
+                        </div>
+                        <div class="catalogoCategoria">
+                            <input type="checkbox" name="c_triangulo" id="categoria3" class="labelCheck">
+                            <label for="categoria3" class="catalogoLabel">Triangulos</label>
+                        </div>
+                        <div class="catalogoCategoria">
+                            <input type="checkbox" name="c_hexagono" id="categoria4" class="labelCheck">
+                            <label for="categoria4" class="catalogoLabel">Hexagonos</label>
+                        </div>
+                    </section>
+                </div>
                 <div class="catalogo">
                     <h2 id="catalogoTitulo"></h2>
                     <section id="catalogoProductos">
                     </section>
                     <section id="catalogoFiltros">
-                        <input type="text" id="catalogoBusqueda">
+                        <p>Filtrar por:</p>
                         <div class="catalogoCategoria">
                             <input type="checkbox" name="c_cuadrado" id="categoria1" class="labelCheck">
                             <label for="categoria1" class="catalogoLabel">Cuadrados</label>
@@ -67,5 +88,6 @@
         </footer>
         <script src="../scripts/dropdown.js"></script>
         <script src="../scripts/catalogo.js"></script>
+        <script src="../scripts/catalogo-dropdown.js"></script>
     </body>
 </html>
